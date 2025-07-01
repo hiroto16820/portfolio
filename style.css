@@ -1,0 +1,284 @@
+body {
+    font-family: 'M PLUS Rounded 1c', serif;
+    background-image: url(images/klara-kulikova-WS_7qiveZ2Y-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: -1;
+}
+
+section {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10px;
+    background-color: rgba(255, 255, 255, 0.2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #ff8c42;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.hero {
+    background-image: url("images/hirofot3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+.hero-text {
+    font-size: 2.5rem;
+    color: #4E342E;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    text-align: center;
+}
+
+.sub-title {
+    font-size: 2rem;
+    color: #4E342E;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+section {
+    padding: 60px 20px;
+}
+
+section h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+#about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+.works-section {
+    padding: 60px 20px
+}
+
+.works-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 24px
+}
+
+.work-item {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px raba(0,0,0,0.1);
+    text-align: center;
+}
+
+.work-item img {
+    width: 30%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+#works p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+#contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 30px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sns-icon {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.2s ease;
+}
+
+.sns-icon:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    /*--- Header Section---*/
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .nav-links li a {
+        font-size: 1.2rem;
+    }
+    /*--- Hero Section ---*/
+    .hero-text {
+        font-size: 1.8rem;
+    }
+    .sub-title {
+        font-size: 1rem;
+    }
+    .hero {
+        background-position: top;
+        height: 70vh;
+    }
+    /*--- Contact Form ---*/
+    form {
+        width: 90%;
+        margin: 0 auto;
+        padding: 10px;
+    }
+    input,textarea {
+        font-size: 1rem;
+        width: 100%
+    }
+    button {
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+    }
+    header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    section {
+        padding: 20px 10px;
+    }
+    .hero {
+        text-align: center;
+    }
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
